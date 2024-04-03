@@ -121,8 +121,6 @@ async fn main() {
                 },
                 "ws_msg" => {
                     println!("{}: {:?}: {:?}", data.name, data.bytes, data.string);
-                    tokio::fs::File::create(format!("./test/{}.json", time)).await.unwrap().write_all(data.string.clone().unwrap().as_bytes()).await.unwrap();
-                    time += 1;
                 },
                 _ => {}
             }
