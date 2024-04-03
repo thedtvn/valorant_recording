@@ -10,9 +10,11 @@ lazy_static = "1.4.0"
 windows-capture = "1.0.68"
 tokio = { version = "1.37.0", features = ["full"] }
 aio_event = "0.1.0"
+tokio-tungstenite = { version = "*", features = ["native-tls-vendored"]}
 native-tls = "*"
 futures-util = "*"
 reqwest = { version = "*", features = ["json"] }
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 base64 = "*"
+uuid = { version = "*", features = ["v4", "fast-rng"] }

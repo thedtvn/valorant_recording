@@ -43,7 +43,7 @@ impl Lockfile {
         .method("GET")
         .uri(url)
         .header("Authorization", self.auth_header())
-        .header("sec-websocket-key", "foo")
+        .header("sec-websocket-key", uuid::Uuid::new_v4().to_string())
         .header("host", "server.example.com")
         .header("upgrade", "websocket")
         .header("connection", "upgrade")
